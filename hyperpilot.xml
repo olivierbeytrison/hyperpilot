@@ -20,12 +20,12 @@
     <!-- END hyperpilot  -->
     <!-- base style for fixed width lines -->
     <style-line cap="butt" fix="true" id="fix" width="1.0"/>
-    <style-text fill="#000000" id="road" k="name" priority="2" size="16" stroke="#eeeeee" stroke-width="2.0"/>
-    <style-text fill="#000000" id="major-road" k="name" priority="1" size="16" stroke="#eeeeee" stroke-width="2.0" style="bold"/>
-    <style-text fill="#000000" id="ref" k="ref" priority="2" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    <style-text fill="#ff0000" id="road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0"/>
+    <style-text fill="#ff0000" id="major-road" k="name" priority="1" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    <style-text fill="#ff0000" id="ref" k="ref" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     <style-text caption="true" id="ref-caption" use="ref"/>
-    <style-text fill="#000000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-    <style-text caption="true" dy="20" fill="#404000" id="poi" k="name" size="16" stroke="#aaffffff" stroke-width="2.0"/>
+    <style-text fill="#ff0000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    <style-text caption="true" dy="20" fill="#ff0000" id="poi" k="name" size="16" stroke="#ffffff" stroke-width="2.0"/>
     <style-area fade="11" fill="#e8e7e3" id="residential"/>
     <style-area fade="10" fill="#e6e3e5" id="railway|industrial"/>
     <!-- fade out at z=7, blend over to 'blend-fill' in z=11 -->
@@ -333,8 +333,8 @@
           e="way" k="sport" v="tennis"><area fill="#d18a6a" stroke="#b36c4c" width="0.2"
           /></m></m>-->
         <!-- outline 0 -->
-        <outline-layer blur="1.0" id="glow" stroke="#000000" width="0.2"/>
-        <outline-layer id="0" stroke="#44000000" width="0.1"/>
+        <outline-layer blur="1.0" id="glow" stroke="#ff0000" width="0.2"/>
+        <outline-layer id="0" stroke="#ff0000" width="0.1"/>
         <!-- match tunnel-tag (to ensure tunnel key is present) -->
         <m k="tunnel" zoom-min="11">
             <!-- match tunnel-tag that are not 'no' or 'false' -->
