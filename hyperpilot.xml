@@ -480,14 +480,18 @@
     </m>
 
     <!-- water -->
-    <!--<style-area id="water" fill="#0000ff"/>-->
-    <style-line id="water" fix="true" cap="butt" stroke="#ff0000" width="1.0"/>
-    <style-line id="river" fix="false" stroke="#00ff00" use="water"/>
+    <style-area id="water" fill="#0000ff"/>
+    <style-line id="water" fix="true" cap="butt" stroke="#ff0000" />
+    <style-line id="river" fix="false" cap="butt" stroke="#00ff00"/>
 
 
     <m e="way" closed="yes" k="natural" v="water">
         <area use="water"/>
         <caption area-size="0.4" fill="#000000" k="name" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    </m>
+
+    <m e="way" k="waterway" v="river">
+        <pathText k="name" font-style="bold" font-size="14" fill="#ff0000" stroke="#ffffff" stroke-width="2"/>
     </m>
 
     <m k="landuse" v="reservoir|basin">
