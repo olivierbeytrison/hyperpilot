@@ -469,9 +469,9 @@
     </m>
 
     <!-- water -->
-    <style-area id="water" fill="#99badf"/>
-    <style-line id="water" cap="butt" fix="true" stroke="#99badf" width="1.0"/>
-    <style-line id="river" fix="false" stroke="#a4bbcc" use="water"/>
+    <!--<style-area id="water" fill="#0000ff"/>-->
+    <style-line id="water" fix="true" cap="butt"  stroke="#ff0000" width="1.0"/>
+    <style-line id="river" fix="false" stroke="#00ff00" use="water"/>
 
 
     <m e="way" closed="yes" k="natural" v="water">
