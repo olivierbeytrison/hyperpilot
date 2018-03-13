@@ -12,14 +12,13 @@
     <style-line id="pedestrian" stroke="#cccccc" width="3.0"/>
     <style-line cap="butt" id="residential:bridge" use="residential"/>
     <style-line cap="butt" id="pedestrian:bridge" use="pedestrian"/>
-    <!-- <style-line id="highway:z11:bridge" use="highway:z11" cap="butt" />-->
     <style-line id="construction" use="secondary:z11"/>
     <style-line id="highway-service" use="residential" width="-0.6"/>
+    <style-line cap="butt" fix="true" id="fix" width="1.0"/>
     <!-- military -->
     <style-area fade="11" fill="#f1bfbf" id="military"/>
     <!-- END hyperpilot  -->
     <!-- base style for fixed width lines -->
-    <style-line cap="butt" fix="true" id="fix" width="1.0"/>
     <style-text fill="#ff0000" id="road" k="name" priority="5" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     <style-text fill="#ff0000" id="major-road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     <style-text fill="#ff0000" id="ref" k="ref" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
@@ -28,9 +27,6 @@
     <style-text caption="true" dy="20" fill="#ff0000" id="poi" k="name" size="16" stroke="#ffffff" stroke-width="2.0"/>
     <style-area fade="11" fill="#e8e7e3" id="residential"/>
     <style-area fade="10" fill="#e6e3e5" id="railway|industrial"/>
-    <!-- fade out at z=7, blend over to 'blend-fill' in z=11 -->
-    <!-- src="textures/wood.png" -->
-    <!-- <style-area id="wood" fill="#d1dbc7" fade="8" blend="11" blend-fill="#9ac56e" />-->
     <style-area id="tex1" src="textures/rough.png"/>
     <!-- meadow|garden -->
     <style-area fade="10" fill="#c9dc91" id="greens" use="tex1"/>
@@ -39,35 +35,25 @@
     <!-- grassland|scrub -->
     <style-area fade="10" fill="#c2cba5" id="darkgreen" use="tex1"/>
     <style-area fade="12" fill="#e4dab5" id="farmland" stroke="#d1dbc7" stroke-width="1.0" use="tex1"/>
-    <!-- <style-area id="greens" fill="#d2e5ce" fade="10" />-->
     <!-- marsh|wetland|mud|nature_reserve -->
     <style-area fade="12" fill="#deecb9" id="greens2"/>
     <!-- park|common|green|cemetery|golf_course|dog_park -->
     <style-area fade="11" fill="#9ac56e" id="park" use="tex1"/>
-    <!-- <style-area id="wood" use="park" fill="#9ac56e" fade="8" stroke="#d1dbc7" stroke-width="1.0"/>-->
-    <style-area blend="11" blend-fill="#83aa5b" fade="8" fill="#b3d095" id="wood" use="park"/>
-    <!-- <style-line id="wood" fix="true" cap="butt" width="1.0" stroke="#9ac56e" />-->
-    <!-- <style-area id="park" fill="#a3ca7b" fade="11" />-->
+    <style-area fade="100" fill="#b3d095" id="wood" />
     <style-line cap="butt" fade="14" fix="true" id="park" stroke="#9ac56e" width="1.0"/>
-    <!-- de:Kleingartengebiet -->
     <style-area fade="12" fill="#efeae0" id="allotments" use="tex1"/>
-    <!-- de:Steinbruch, Schotter-, Kies-, Sand- und Tongrube -->
     <style-area fade="10" fill="#ddddcc" id="quarry"/>
     <!-- track|footway|path|cycleway -->
     <style-line cap="butt" fix="true" id="footway" stipple="2" stipple-stroke="#d35c48" stipple-width="0.6" stroke="#aaffffff" width="1.8"/>
     <style-line id="highway:cycleway" use="pedestrian"/>
     <style-line id="highway:track" use="pedestrian"/>
     <style-line id="highway:path" use="pedestrian"/>
-    <!-- <style-line id="footway:z16" use="footway" width="-0.95" fixed="false" fade="-1"/>-->
     <style-line id="footway:z17" use="pedestrian"/>
-    <!-- de: ein Weg der für Reiter vorgeshen ist.. -->
     <style-line cap="butt" id="bridleway" stipple-stroke="#837b58" stroke="#d3cb98" use="footway" width="0.1"/>
     <style-line cap="butt" fix="true" id="steps" stipple="2" stipple-stroke="#be6253" stipple-width="1.0" stroke="#aaffffff" width="4.2"/>
     <style-line cap="butt" fix="true" id="water:outline" stroke="#a4bbcc" width="1.0"/>
     <style-line cap="butt" fix="true" id="water" stroke="#a4bbcc" width="1.0"/>
     <style-line fix="false" id="river" stroke="#a4bbcc" use="water"/>
-    <!--<style-area id="water" fill="#97b7e5" afc5e3 />-->
-    <!-- src="textures/water.png" -->
     <style-area fade="-1" fill="#99badf" id="water" use="tex1"/>
     <!-- no-go area boundary -->
     <style-line cap="butt" fix="true" id="fence" stroke="#444444" width="1.2"/>
@@ -173,12 +159,7 @@
                 <area fade="10" fill="#fffad1" use="tex1"/>
             </m>
             <m k="landuse|natural" v="forest|wood">
-                <m zoom-max="13" zoom-min="8">
-                    <area use="wood"/>
-                </m>
-                <m zoom-min="14">
-                    <area stroke="#91bf63" stroke-width="1.0" use="wood"/>
-                </m>
+                <area use="wood"/>
             </m>
             <!-- keep grass above forest:wood and leisure:park! -->
             <!-- http://wiki.openstreetmap.org/wiki/Proposed_features/conservation,
