@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
-    <!-- START hyperpilot  -->
+<rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
     <!-- roads -->
     <!--<style-line id="highway:z11" stroke="#ff7e00" width="5.0"/>-->
     <!--<style-line id="trunk" stroke="#ff7e00" width="5.0"/>-->
@@ -15,9 +15,29 @@
     <!--<style-line id="construction" use="secondary:z11"/>-->
     <!--<style-line id="highway-service" use="residential" width="-0.6"/>-->
     <!--<style-line cap="butt" fix="true" id="fix" width="1.0"/>-->
-    <!-- military -->
-    <style-area fade="11" fill="#f1bfbf" id="military"/>
-    <!-- END hyperpilot  -->
+
+
+    <!-- areas -->
+    <!--<style-area fade="11" fill="#f1bfbf" id="military"/>-->
+    <!--<style-area fade="11" fill="#e8e7e3" id="residential"/>-->
+    <!--<style-area fade="10" fill="#e6e3e5" id="railway|industrial"/>-->
+    <!--<style-area fade="10" fill="#c9dc91" id="greens" use="tex1"/>-->
+    <!--<style-area fade="12" fill="#d3dcb9" id="lightgreen" use="tex1"/>-->
+    <!--<style-area id="tex1" src="textures/rough.png"/>-->
+    <!--<style-area fade="10" fill="#c2cba5" id="darkgreen" use="tex1"/>-->
+    <!--<style-area fade="12" fill="#e4dab5" id="farmland" stroke="#d1dbc7" stroke-width="1.0" use="tex1"/>-->
+    <!--<style-area fade="12" fill="#deecb9" id="greens2"/>-->
+    <!--<style-area fade="11" fill="#9ac56e" id="park" use="tex1"/>-->
+    <!--<style-area fade="100" fill="#b3d095" id="wood"/>-->
+    <!--<style-area fade="12" fill="#efeae0" id="allotments" use="tex1"/>-->
+    <!--<style-area fade="10" fill="#ddddcc" id="quarry"/>-->
+    <!--<style-area fade="-1" fill="#99badf" id="water" use="tex1"/>-->
+    <!--<style-area fade="15" fill="#f2f0eb" id="building" stroke="#b7b6b3" stroke-width="1.0"/>-->
+
+    <!-- airport -->
+    <!--<style-area fill="#005500" id="airport"/>-->
+    <!--<style-line cap="butt" id="airport" stroke="#005500" width="20"/>-->
+
     <!-- base style for fixed width lines -->
     <style-text fill="#ff0000" id="road" k="name" priority="5" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     <style-text fill="#ff0000" id="major-road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
@@ -25,24 +45,12 @@
     <style-text caption="true" id="ref-caption" use="ref"/>
     <style-text fill="#ff0000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     <style-text caption="true" dy="20" fill="#ff0000" id="poi" k="name" size="16" stroke="#ffffff" stroke-width="2.0"/>
-    <style-area fade="11" fill="#e8e7e3" id="residential"/>
-    <style-area fade="10" fill="#e6e3e5" id="railway|industrial"/>
-    <style-area id="tex1" src="textures/rough.png"/>
     <!-- meadow|garden -->
-    <style-area fade="10" fill="#c9dc91" id="greens" use="tex1"/>
     <!-- grass -->
-    <style-area fade="12" fill="#d3dcb9" id="lightgreen" use="tex1"/>
     <!-- grassland|scrub -->
-    <style-area fade="10" fill="#c2cba5" id="darkgreen" use="tex1"/>
-    <style-area fade="12" fill="#e4dab5" id="farmland" stroke="#d1dbc7" stroke-width="1.0" use="tex1"/>
     <!-- marsh|wetland|mud|nature_reserve -->
-    <style-area fade="12" fill="#deecb9" id="greens2"/>
     <!-- park|common|green|cemetery|golf_course|dog_park -->
-    <style-area fade="11" fill="#9ac56e" id="park" use="tex1"/>
-    <style-area fade="100" fill="#b3d095" id="wood" />
     <style-line cap="butt" fade="14" fix="true" id="park" stroke="#9ac56e" width="1.0"/>
-    <style-area fade="12" fill="#efeae0" id="allotments" use="tex1"/>
-    <style-area fade="10" fill="#ddddcc" id="quarry"/>
     <!-- track|footway|path|cycleway -->
     <style-line cap="butt" fix="true" id="footway" stipple="2" stipple-stroke="#d35c48" stipple-width="0.6" stroke="#aaffffff" width="1.8"/>
     <style-line id="highway:cycleway" use="pedestrian"/>
@@ -54,18 +62,16 @@
     <style-line cap="butt" fix="true" id="water:outline" stroke="#a4bbcc" width="1.0"/>
     <style-line cap="butt" fix="true" id="water" stroke="#a4bbcc" width="1.0"/>
     <style-line fix="false" id="river" stroke="#a4bbcc" use="water"/>
-    <style-area fade="-1" fill="#99badf" id="water" use="tex1"/>
     <!-- no-go area boundary -->
     <style-line cap="butt" fix="true" id="fence" stroke="#444444" width="1.2"/>
     <!-- <style-line id="building" stroke="#c9c3c1" width="1.0" fix="true" cap="butt" fade="15"/>-->
     <!-- <style-line id="building" stroke="#d0cec8" width="1.0" fix="true" cap="butt" fade="15"/><style-area id="building" fill="#e9e6e3" fade="15"/>-->
     <style-line fade="15" id="building" stroke="#eeb7b6b3" use="fix"/>
-    <style-area fade="15" fill="#f2f0eb" id="building" stroke="#b7b6b3" stroke-width="1.0"/>
     <m e="way" k="natural" v="issea|sea">
         <area mesh="true" use="water"/>
     </m>
     <m e="way" k="natural" v="nosea">
-        <area fill="#f8f8f8" mesh="true"/>
+        <area fill="#ffffff" mesh="true"/>
     </m>
     <!-- all closed ways that are not 'highway' or 'building' -->
     <m closed="yes" e="way" k="highway|building" v="~">
@@ -434,7 +440,7 @@
         </m>
         <!-- runways areas -->
         <m k="aeroway">
-            <area fill="#fc00ff"/>
+            <area use="airport" />
             <m closed="yes" v="aerodrome">
                 <caption dy="18" fill="#ff0000" k="name" priority="3" size="19" stroke="#ffffff" stroke-width="2.0"/>
                 <caption dy="-18" fill="#ff0000" k="ref" priority="3" size="19" stroke="#ffffff" stroke-width="2.0"/>
@@ -743,7 +749,7 @@
         <!-- runways cores -->
         <m k="aeroway">
             <m k="free_flying:paragliding" v="~|no|false">
-                <line cap="butt" id="aeroway:runway" stroke="#fc00ff" width="20"/>
+                <line use="airport" />
             </m>
         </m>
         <!-- man_made features -->
