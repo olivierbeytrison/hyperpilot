@@ -20,8 +20,8 @@
     <!-- END hyperpilot  -->
     <!-- base style for fixed width lines -->
     <style-line cap="butt" fix="true" id="fix" width="1.0"/>
-    <style-text fill="#ff0000" id="road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0"/>
-    <style-text fill="#ff0000" id="major-road" k="name" priority="1" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    <style-text fill="#ff0000" id="road" k="name" priority="5" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    <style-text fill="#ff0000" id="major-road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     <style-text fill="#ff0000" id="ref" k="ref" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     <style-text caption="true" id="ref-caption" use="ref"/>
     <style-text fill="#ff0000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
@@ -333,10 +333,10 @@
           e="way" k="sport" v="tennis"><area fill="#d18a6a" stroke="#b36c4c" width="0.2"
           /></m></m>-->
         <!-- outline 0 -->
-        <outline-layer blur="1.0" id="glow" stroke="#ff0000" width="0.2"/>
-        <outline-layer id="0" stroke="#ff0000" width="0.1"/>
+        <!-- <outline-layer blur="1.0" id="glow" stroke="#ff0000" width="0.2"/>-->
+        <!-- <outline-layer id="0" stroke="#ff0000" width="0.1"/>-->
         <!-- match tunnel-tag (to ensure tunnel key is present) -->
-        <m k="tunnel" zoom-min="11">
+        <m k="tunnel">
             <!-- match tunnel-tag that are not 'no' or 'false' -->
             <m k="tunnel" v="-|no|false">
                 <!-- match area-tag that are 'no' or 'false' or not present -->
@@ -445,7 +445,7 @@
         <!-- platform cores -->
         <m k="highway|railway|public_transport" v="platform">
             <m closed="yes">
-                <area fill="#dbdbc9"/>
+                <area fill="#00ff00"/>
             </m>
             <m closed="no">
                 <line stroke="#dbdbc9" width="0.3"/>
@@ -761,7 +761,9 @@
         <!-- end highway -->
         <!-- runways cores -->
         <m k="aeroway">
-            <line cap="butt" id="aeroway:runway" stroke="#fc00ff" width="20"/>
+            <m k="free_flying:paragliding" v="~|no|false">
+                <line cap="butt" id="aeroway:runway" stroke="#fc00ff" width="20"/>
+            </m>
         </m>
         <!-- man_made features -->
         <m k="man_made" v="pier">
@@ -890,30 +892,30 @@
         <!-- place -->
         <m k="place">
             <m v="locality" zoom-min="13">
-                <caption fill="#606060" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+                <caption fill="#ff0000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
             </m>
             <m v="suburb" zoom-max="14">
-                <caption fill="#404040" k="name" priority="4" size="17" stroke="#ffffff" stroke-width="2.0" style="bold_italic"/>
+                <caption fill="#ff0000" k="name" priority="4" size="17" stroke="#ffffff" stroke-width="2.0" style="bold_italic"/>
             </m>
             <m v="village" zoom-max="14">
-                <caption fill="#000000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2.0"/>
+                <caption fill="#ff0000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2.0"/>
             </m>
             <m v="island" zoom-min="10">
-                <caption fill="#000000" k="name" priority="5" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+                <caption fill="#ff0000" k="name" priority="5" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
             </m>
             <m v="town">
-                <caption fill="#000000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2.0"/>
+                <caption fill="#ff0000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2.0"/>
             </m>
             <m v="city">
                 <m zoom-min="7">
-                    <caption dy="14" fill="#000000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" style="bold" symbol="symbols/dot_black.svg"/>
+                    <caption dy="14" fill="#ff0000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" style="bold" symbol="symbols/dot_black.svg"/>
                 </m>
                 <m zoom-max="6">
-                    <caption dy="14" fill="#000000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" symbol="symbols/dot_black.svg"/>
+                    <caption dy="14" fill="#ff0000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" symbol="symbols/dot_black.svg"/>
                 </m>
             </m>
             <m v="country">
-                <caption fill="#000000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+                <caption fill="#ff0000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2.0" style="bold"/>
             </m>
         </m>
         <!-- railway -->
@@ -1113,8 +1115,8 @@
         </m>
         <m k="natural" v="peak" zoom-min="13">
             <symbol src="symbols/peak.svg" symbol-percent="100"/>
-            <caption dy="12" fill="#000000" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            <caption dy="-12" fill="#000000" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <caption dy="12" fill="#ff0000" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <caption dy="-12" fill="#ff0000" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
     </m>
     <!-- Power lines -->
