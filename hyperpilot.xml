@@ -47,382 +47,6 @@
         <line stroke="#b3ddff" stroke-width="0.8"/>
     </m>
 
-
-
-    <!-- roads -->
-    <!--<style-line id="highway:z11" stroke="#ff7e00" width="5.0"/>-->
-    <!--<style-line id="trunk" stroke="#ff7e00" width="5.0"/>-->
-    <!--<style-line id="trunk_link" stroke="#ff7e00" width="3.0"/>-->
-    <!--<style-line id="primary:z11" stroke="#dc8912" width="5.0"/>-->
-    <!--<style-line id="secondary:z11" stroke="#e7bc28" width="4.0"/>-->
-    <!--<style-line id="tertiary" stroke="#e7bc28" width="4.0"/>-->
-    <!--<style-line id="residential" stroke="#b59b41" width="3.0"/>-->
-    <!--<style-line id="pedestrian" stroke="#cccccc" width="3.0"/>-->
-    <!--<style-line id="residential:bridge" use="residential"/>-->
-    <!--<style-line id="pedestrian:bridge" use="pedestrian"/>-->
-    <!--<style-line id="construction" use="secondary:z11"/>-->
-    <!--<style-line id="highway-service" use="residential" width="-0.6"/>-->
-
-
-    <!-- areas -->
-    <!--<style-area  fill="#f1bfbf" id="military"/>-->
-    <!--<style-area  fill="#e8e7e3" id="residential"/>-->
-    <!--<style-area  fill="#e6e3e5" id="railway|industrial"/>-->
-    <!--<style-area  fill="#c9dc91" id="greens" use="tex1"/>-->
-    <!--<style-area  fill="#d3dcb9" id="lightgreen" use="tex1"/>-->
-    <!--<style-area id="tex1" fill="#ff0000" />-->
-    <!--<style-area  fill="#c2cba5" id="darkgreen" use="tex1"/>-->
-    <!--<style-area  fill="#e4dab5" id="farmland" stroke="#d1dbc7" stroke-width="1.0" use="tex1"/>-->
-    <!--<style-area  fill="#deecb9" id="greens2"/>-->
-    <!--<style-area  fill="#9ac56e" id="park" use="tex1"/>-->
-    <!--<style-area  fill="#b3d095" id="wood"/>-->
-    <!--<style-area  fill="#efeae0" id="allotments" use="tex1"/>-->
-    <!--<style-area  fill="#ddddcc" id="quarry"/>-->
-    <!--<style-area  fill="#f2f0eb" id="building" stroke="#b7b6b3" stroke-width="1.0"/>-->
-    <!--<style-area  fill="#f2f0eb" id="rail" />-->
-
-
-    <!-- base style for fixed width lines -->
-    <!--<style-text fill="#ff0000" id="road" k="name" priority="5" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
-    <!--<style-text fill="#ff0000" id="major-road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
-    <!--<style-text fill="#ff0000" id="ref" k="ref" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
-    <!--<style-text caption="true" id="ref-caption" use="ref"/>-->
-    <!--<style-text fill="#ff0000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
-    <!--<style-text caption="true" dy="20" fill="#ff0000" id="poi" k="name" size="16" stroke="#ffffff" stroke-width="2.0"/>-->
-    <!--<style-line fix="true" id="park" stroke="#9ac56e" width="1.0"/>-->
-    <!--&lt;!&ndash; track|footway|path|cycleway &ndash;&gt;-->
-    <!--<style-line fix="true" id="footway" stipple="2" stipple-stroke="#d35c48" stipple-width="0.6" stroke="#aaffffff" width="1.8"/>-->
-    <!--<style-line id="highway:cycleway" use="pedestrian"/>-->
-    <!--<style-line id="highway:track" use="pedestrian"/>-->
-    <!--<style-line id="highway:path" use="pedestrian"/>-->
-    <!--<style-line id="footway:z17" use="pedestrian"/>-->
-    <!--<style-line id="bridleway" stipple-stroke="#837b58" stroke="#d3cb98" use="footway" width="0.1"/>-->
-    <!--<style-line fix="true" id="steps" stipple="2" stipple-stroke="#be6253" stipple-width="1.0" stroke="#aaffffff" width="4.2"/>-->
-    <!--<style-line fix="true" id="fence" stroke="#444444" width="1.2"/>-->
-    <!--<style-line id="building" stroke="#eeb7b6b3" use="fix"/>-->
-    <m e="way" k="natural" v="issea|sea">
-        <area mesh="true" use="water"/>
-    </m>
-    <m e="way" k="natural" v="nosea">
-        <area fill="#ffffff" mesh="true"/>
-    </m>
-    <!-- all closed ways that are not 'highway' or 'building' -->
-    <m closed="yes" e="way" k="highway|building" v="~">
-        <m k="landuse">
-            <m v="urban">
-                <area use="greens"/>
-            </m>
-            <m v="meadow|conservation">
-                <area use="greens"/>
-            </m>
-            <m v="residential|commercial|retail|farmyard">
-                <area use="residential"/>
-            </m>
-        </m>
-        <m k="natural" v="grassland|scrub">
-            <area use="darkgreen"/>
-        </m>
-        <m k="landuse">
-            <m v="farmland|farm|orchard|vineyard|greenhouse_horticulture|plant_nursery">
-                <area use="farmland"/>
-            </m>
-            <m v="quarry">
-                <area use="quarry"/>
-            </m>
-            <m v="industrial|railway">
-                <area use="railway|industrial"/>
-            </m>
-            <m v="military">
-                <area use="military"/>
-            </m>
-        </m>
-        <m k="landuse|natural|leisure|amenity|tourism">
-            <m k="leisure|landuse" v="nature_reserve">
-                <area use="greens2"/>
-            </m>
-            <m k="landuse" v="village_green|recreation_ground">
-                <area use="greens"/>
-            </m>
-            <m k="landuse" v="allotments" zoom-min="12">
-                <area use="allotments"/>
-            </m>
-            <m k="leisure" v="park|common|green|golf_course" zoom-min="11">
-                <area use="park"/>
-            </m>
-            <m k="landuse|natural" v="forest|wood">
-                <area use="wood"/>
-            </m>
-            <m k="landuse" v="grass">
-                <area use="lightgreen"/>
-            </m>
-            <m k="leisure" v="garden">
-                <area use="greens"/>
-            </m>
-
-            <m k="leisure" v="track">
-                <line fix="true" stroke="#c1bcb6" width="1.3"/>
-            </m>
-        </m>
-    </m>
-
-    <m e="way">
-
-        <!-- runways areas -->
-        /
-        <!-- highway -->
-        <m k="highway">
-            <m select="first" zoom-max="5" zoom-min="4">
-                <m k="area" v="~|no|false">
-                    <!-- <m v="secondary|primary_link" zoom-min="9"><line stroke="#f2df6d" width="1.3" fix="true" /></m>-->
-                    <m v="route_primary" zoom-min="3">
-                        <line fix="true" stroke="#c6c5a2" width="1.2"/>
-                    </m>
-                    <m v="route_trunk" zoom-min="3">
-                        <line fix="true" stroke="#deb683" width="1.3"/>
-                    </m>
-                    <m v="route_motorway">
-                        <line fix="true" stroke="#deb683" width="1.4"/>
-                    </m>
-                </m>
-            </m>
-            <m select="first" zoom-max="7" zoom-min="5">
-                <m k="area" v="~|no|false">
-                    <m v="secondary|primary_link" zoom-min="9">
-                        <line stroke="#e2cf5d" use="fix" width="0.3"/>
-                    </m>
-                    <m v="trunk_link|motorway_link" zoom-min="8">
-                        <line stroke="#eec693" use="fix" width="0.4"/>
-                    </m>
-                    <m v="primary" zoom-min="5">
-                        <line stroke="#c6c5a2" use="fix" width="0.5"/>
-                    </m>
-                    <m v="trunk" zoom-min="5">
-                        <line stroke="#c6c5a2" use="fix" width="0.5"/>
-                    </m>
-                    <m v="motorway">
-                        <line stroke="#deb683" use="fix" width="0.6"/>
-                    </m>
-                </m>
-            </m>
-            <m zoom-min="8">
-                <!-- when tunnel|bridge is present it must be 'no' -->
-                <m k="tunnel|bridge" v="~|no">
-                    <!-- highway area -->
-                    <m k="area" v="yes|true">
-                        <m v="footway" zoom-min="15">
-                            <line fix="true" stroke="#c0c0c0" width="1.0"/>
-                        </m>
-                        <m v="pedestrian|service|unclassified|residential|road|living_street" zoom-min="13">
-                            <line fix="true" stroke="#d0d0d0" width="1.0"/>
-                        </m>
-                    </m>
-                    <m k="area" v="~|no|false">
-                        <m zoom-min="16">
-                            <m v="steps">
-                                <line use="steps"/>
-                            </m>
-                            <!-- <m v="track|footway|path|cycleway" zoom-min="16" zoom-max="16"><line use="footway:z16"/></m>-->
-                            <m v="track|footway|path|cycleway" zoom-min="17">
-                                <line use="footway:z17"/>
-                            </m>
-                        </m>
-                        <m zoom-min="14">
-                            <m v="footway">
-                                <line use="footway"/>
-                            </m>
-                            <m v="cycleway">
-                                <line use="highway:cycleway"/>
-                            </m>
-                            <m v="track">
-                                <line use="highway:track"/>
-                            </m>
-                            <m v="path">
-                                <line use="highway:path"/>
-                            </m>
-                            <m v="bridleway">
-                                <line use="bridleway"/>
-                            </m>
-                            <m v="construction">
-                                <line use="construction"/>
-                            </m>
-                            <m v="service">
-                                <!-- matches every service but parking_isle -->
-                                <m k="service" v="-|parking_aisle">
-                                    <line use="highway-service"/>
-                                </m>
-                                <m k="service" v="parking_aisle" zoom-min="16">
-                                    <line use="highway-service" width="-0.4"/>
-                                </m>
-                            </m>
-                        </m>
-                        <m v="trunk_link|motorway_link">
-                            <line use="trunk_link"/>
-                            <text use="major-road"/>
-                        </m>
-                        <m zoom-min="13">
-                            <m v="byway|pedestrian">
-                                <line use="residential" width="-0.4"/>
-                                <text use="road"/>
-                            </m>
-                        </m>
-                        <m v="residential|road|unclassified|living_street" zoom-min="12">
-                            <line use="residential"/>
-                            <text use="road"/>
-                        </m>
-                        <m v="tertiary|secondary_link" zoom-min="12">
-                            <line use="tertiary"/>
-                            <text use="road"/>
-                        </m>
-                        <m v="secondary|primary_link" zoom-min="10">
-                            <line use="secondary:z11"/>
-                            <text use="major-road"/>
-                        </m>
-                        <m v="primary">
-                            <line use="primary:z11"/>
-                            <text use="major-road"/>
-                            <m zoom-max="12">
-                                <text use="ref-caption"/>
-                            </m>
-                            <m zoom-min="13">
-                                <text use="ref"/>
-                            </m>
-                        </m>
-                        <m v="trunk">
-                            <line use="trunk"/>
-                            <text use="major-road"/>
-                            <m zoom-max="12">
-                                <text use="ref-caption"/>
-                            </m>
-                            <m zoom-min="13">
-                                <text use="ref"/>
-                            </m>
-                        </m>
-                        <m v="motorway">
-                            <line use="highway:z11"/>
-                            <text use="major-road"/>
-                            <m zoom-max="12">
-                                <text use="ref-caption"/>
-                            </m>
-                            <m zoom-min="13">
-                                <text use="ref"/>
-                            </m>
-                        </m>
-                    </m>
-                    <!-- end area=~|no|false -->
-                </m>
-                <!-- end tunnel|bridge=~|no|false -->
-                <!-- muse contain bridge -->
-                <m k="bridge">
-                    <!-- except bridge=no|false -->
-                    <m k="bridge" v="-|no|false">
-                        <!-- no areas -->
-                        <m k="area" v="~|no|false">
-                            <m zoom-min="16">
-                                <m v="steps">
-                                    <line use="steps"/>
-                                </m>
-                            </m>
-                            <m v="track|footway|path|cycleway" zoom-min="15">
-                                <line use="footway:z17"/>
-                            </m>
-                            <m select="first" zoom-min="14">
-                                <m v="footway">
-                                    <line use="footway"/>
-                                </m>
-                                <m v="cycleway">
-                                    <line use="highway:cycleway"/>
-                                </m>
-                                <m v="track">
-                                    <line use="highway:track"/>
-                                </m>
-                                <m v="path">
-                                    <line use="highway:path"/>
-                                </m>
-                                <m v="bridleway">
-                                    <line use="bridleway"/>
-                                </m>
-                                <m v="construction">
-                                    <line use="construction"/>
-                                </m>
-                                <m v="service">
-                                    <line use="highway-service"/>
-                                </m>
-                            </m>
-                            <m select="first" zoom-min="13">
-                                <m v="byway|pedestrian">
-                                    <line use="pedestrian:bridge"/>
-                                    <text use="road"/>
-                                </m>
-                                <m v="residential|road|unclassified|living_street">
-                                    <line use="residential:bridge"/>
-                                    <text use="road"/>
-                                </m>
-                            </m>
-                            <m select="first">
-                                <m v="tertiary|secondary_link">
-                                    <line use="tertiary"/>
-                                    <text use="road"/>
-                                </m>
-                                <m v="trunk_link|motorway_link">
-                                    <line use="trunk_link"/>
-                                    <text use="major-road"/>
-                                </m>
-                                <m v="secondary|primary_link">
-                                    <line use="secondary:z11"/>
-                                    <text use="major-road"/>
-                                </m>
-                                <m v="primary">
-                                    <line use="primary:z11"/>
-                                    <text use="major-road"/>
-                                    <m zoom-max="12">
-                                        <text use="ref-caption"/>
-                                    </m>
-                                    <m zoom-min="13">
-                                        <text use="ref"/>
-                                    </m>
-                                </m>
-                                <m v="trunk">
-                                    <line use="trunk"/>
-                                    <text use="major-road"/>
-                                    <m zoom-max="12">
-                                        <text use="ref-caption"/>
-                                    </m>
-                                    <m zoom-min="13">
-                                        <text use="ref"/>
-                                    </m>
-                                </m>
-                                <m v="motorway">
-                                    <line use="highway:z11"/>
-                                    <text use="major-road"/>
-                                    <m zoom-max="12">
-                                        <text use="ref-caption"/>
-                                    </m>
-                                    <m zoom-min="13">
-                                        <text use="ref"/>
-                                    </m>
-                                </m>
-                            </m>
-                        </m>
-                        <!-- end area=~|no|false -->
-                        <m k="area" select="first" v="yes|true">
-                            <m v="footway" zoom-min="15">
-                                <line stroke="#c0c0c0" width="0.15"/>
-                            </m>
-                            <m v="pedestrian|service|unclassified|residential|road|living_street" zoom-min="13">
-                                <line fix="true" stroke="#c0c0c0" width="1.0"/>
-                            </m>
-                        </m>
-                        <!-- end area=yes|true -->
-                    </m>
-                    <!-- end bridge=yes -->
-                </m>
-            </m>
-            <!-- end zoom-min=11 -->
-        </m>
-        <!-- end highway -->
-    </m>
-
-
     <!-- cities -->
     <m k="place">
         <m v="island" zoom-min="11">
@@ -523,6 +147,371 @@
     <m k="tourism" v="alpine_hut">
         <symbol src="symbols_new/alpinehut.svg"/>
     </m>
+
+
+
+
+    <!-- roads -->
+
+
+
+    <!-- areas -->
+    <!--<style-area  fill="#f1bfbf" id="military"/>-->
+    <!--<style-area  fill="#e8e7e3" id="residential"/>-->
+    <!--<style-area  fill="#e6e3e5" id="railway|industrial"/>-->
+    <!--<style-area  fill="#c9dc91" id="greens" use="tex1"/>-->
+    <!--<style-area  fill="#d3dcb9" id="lightgreen" use="tex1"/>-->
+    <!--<style-area id="tex1" fill="#ff0000" />-->
+    <!--<style-area  fill="#c2cba5" id="darkgreen" use="tex1"/>-->
+    <!--<style-area  fill="#e4dab5" id="farmland" stroke="#d1dbc7" stroke-width="1.0" use="tex1"/>-->
+    <!--<style-area  fill="#deecb9" id="greens2"/>-->
+    <!--<style-area  fill="#9ac56e" id="park" use="tex1"/>-->
+    <!--<style-area  fill="#b3d095" id="wood"/>-->
+    <!--<style-area  fill="#efeae0" id="allotments" use="tex1"/>-->
+    <!--<style-area  fill="#ddddcc" id="quarry"/>-->
+    <!--<style-area  fill="#f2f0eb" id="building" stroke="#b7b6b3" stroke-width="1.0"/>-->
+    <!--<style-area  fill="#f2f0eb" id="rail" />-->
+
+
+    <!-- base style for fixed width lines -->
+    <!--<style-text fill="#ff0000" id="road" k="name" priority="5" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text fill="#ff0000" id="major-road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text fill="#ff0000" id="ref" k="ref" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text caption="true" id="ref-caption" use="ref"/>-->
+    <!--<style-text fill="#ff0000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text caption="true" dy="20" fill="#ff0000" id="poi" k="name" size="16" stroke="#ffffff" stroke-width="2.0"/>-->
+    <!--<style-line fix="true" id="park" stroke="#9ac56e" width="1.0"/>-->
+    <!--&lt;!&ndash; track|footway|path|cycleway &ndash;&gt;-->
+    <!--<style-line fix="true" id="footway" stipple="2" stipple-stroke="#d35c48" stipple-width="0.6" stroke="#aaffffff" width="1.8"/>-->
+    <!--<style-line id="highway:cycleway" use="pedestrian"/>-->
+    <!--<style-line id="highway:track" use="pedestrian"/>-->
+    <!--<style-line id="highway:path" use="pedestrian"/>-->
+    <!--<style-line id="footway:z17" use="pedestrian"/>-->
+    <!--<style-line id="bridleway" stipple-stroke="#837b58" stroke="#d3cb98" use="footway" width="0.1"/>-->
+    <!--<style-line fix="true" id="steps" stipple="2" stipple-stroke="#be6253" stipple-width="1.0" stroke="#aaffffff" width="4.2"/>-->
+    <!--<style-line fix="true" id="fence" stroke="#444444" width="1.2"/>-->
+    <!--<style-line id="building" stroke="#eeb7b6b3" use="fix"/>-->
+    <!--<m e="way" k="natural" v="issea|sea">-->
+        <!--<area mesh="true" use="water"/>-->
+    <!--</m>-->
+    <!--<m e="way" k="natural" v="nosea">-->
+        <!--<area fill="#ffffff" mesh="true"/>-->
+    <!--</m>-->
+    <!--&lt;!&ndash; all closed ways that are not 'highway' or 'building' &ndash;&gt;-->
+    <!--<m closed="yes" e="way" k="highway|building" v="~">-->
+        <!--<m k="landuse">-->
+            <!--<m v="urban">-->
+                <!--<area use="greens"/>-->
+            <!--</m>-->
+            <!--<m v="meadow|conservation">-->
+                <!--<area use="greens"/>-->
+            <!--</m>-->
+            <!--<m v="residential|commercial|retail|farmyard">-->
+                <!--<area use="residential"/>-->
+            <!--</m>-->
+        <!--</m>-->
+        <!--<m k="natural" v="grassland|scrub">-->
+            <!--<area use="darkgreen"/>-->
+        <!--</m>-->
+        <!--<m k="landuse">-->
+            <!--<m v="farmland|farm|orchard|vineyard|greenhouse_horticulture|plant_nursery">-->
+                <!--<area use="farmland"/>-->
+            <!--</m>-->
+            <!--<m v="quarry">-->
+                <!--<area use="quarry"/>-->
+            <!--</m>-->
+            <!--<m v="industrial|railway">-->
+                <!--<area use="railway|industrial"/>-->
+            <!--</m>-->
+            <!--<m v="military">-->
+                <!--<area use="military"/>-->
+            <!--</m>-->
+        <!--</m>-->
+        <!--<m k="landuse|natural|leisure|amenity|tourism">-->
+            <!--<m k="leisure|landuse" v="nature_reserve">-->
+                <!--<area use="greens2"/>-->
+            <!--</m>-->
+            <!--<m k="landuse" v="village_green|recreation_ground">-->
+                <!--<area use="greens"/>-->
+            <!--</m>-->
+            <!--<m k="landuse" v="allotments" zoom-min="12">-->
+                <!--<area use="allotments"/>-->
+            <!--</m>-->
+            <!--<m k="leisure" v="park|common|green|golf_course" zoom-min="11">-->
+                <!--<area use="park"/>-->
+            <!--</m>-->
+            <!--<m k="landuse|natural" v="forest|wood">-->
+                <!--<area use="wood"/>-->
+            <!--</m>-->
+            <!--<m k="landuse" v="grass">-->
+                <!--<area use="lightgreen"/>-->
+            <!--</m>-->
+            <!--<m k="leisure" v="garden">-->
+                <!--<area use="greens"/>-->
+            <!--</m>-->
+
+            <!--<m k="leisure" v="track">-->
+                <!--<line fix="true" stroke="#c1bcb6" width="1.3"/>-->
+            <!--</m>-->
+        <!--</m>-->
+    <!--</m>-->
+
+    <!--<m e="way">-->
+
+        <!--&lt;!&ndash; runways areas &ndash;&gt;-->
+        <!--/-->
+        <!--&lt;!&ndash; highway &ndash;&gt;-->
+        <!--<m k="highway">-->
+            <!--<m select="first" zoom-max="5" zoom-min="4">-->
+                <!--<m k="area" v="~|no|false">-->
+                    <!--&lt;!&ndash; <m v="secondary|primary_link" zoom-min="9"><line stroke="#f2df6d" width="1.3" fix="true" /></m>&ndash;&gt;-->
+                    <!--<m v="route_primary" zoom-min="3">-->
+                        <!--<line fix="true" stroke="#c6c5a2" width="1.2"/>-->
+                    <!--</m>-->
+                    <!--<m v="route_trunk" zoom-min="3">-->
+                        <!--<line fix="true" stroke="#deb683" width="1.3"/>-->
+                    <!--</m>-->
+                    <!--<m v="route_motorway">-->
+                        <!--<line fix="true" stroke="#deb683" width="1.4"/>-->
+                    <!--</m>-->
+                <!--</m>-->
+            <!--</m>-->
+            <!--<m select="first" zoom-max="7" zoom-min="5">-->
+                <!--<m k="area" v="~|no|false">-->
+                    <!--<m v="secondary|primary_link" zoom-min="9">-->
+                        <!--<line stroke="#e2cf5d" use="fix" width="0.3"/>-->
+                    <!--</m>-->
+                    <!--<m v="trunk_link|motorway_link" zoom-min="8">-->
+                        <!--<line stroke="#eec693" use="fix" width="0.4"/>-->
+                    <!--</m>-->
+                    <!--<m v="primary" zoom-min="5">-->
+                        <!--<line stroke="#c6c5a2" use="fix" width="0.5"/>-->
+                    <!--</m>-->
+                    <!--<m v="trunk" zoom-min="5">-->
+                        <!--<line stroke="#c6c5a2" use="fix" width="0.5"/>-->
+                    <!--</m>-->
+                    <!--<m v="motorway">-->
+                        <!--<line stroke="#deb683" use="fix" width="0.6"/>-->
+                    <!--</m>-->
+                <!--</m>-->
+            <!--</m>-->
+            <!--<m zoom-min="8">-->
+                <!--&lt;!&ndash; when tunnel|bridge is present it must be 'no' &ndash;&gt;-->
+                <!--<m k="tunnel|bridge" v="~|no">-->
+                    <!--&lt;!&ndash; highway area &ndash;&gt;-->
+                    <!--<m k="area" v="yes|true">-->
+                        <!--<m v="footway" zoom-min="15">-->
+                            <!--<line fix="true" stroke="#c0c0c0" width="1.0"/>-->
+                        <!--</m>-->
+                        <!--<m v="pedestrian|service|unclassified|residential|road|living_street" zoom-min="13">-->
+                            <!--<line fix="true" stroke="#d0d0d0" width="1.0"/>-->
+                        <!--</m>-->
+                    <!--</m>-->
+                    <!--<m k="area" v="~|no|false">-->
+                        <!--<m zoom-min="16">-->
+                            <!--<m v="steps">-->
+                                <!--<line use="steps"/>-->
+                            <!--</m>-->
+                            <!--&lt;!&ndash; <m v="track|footway|path|cycleway" zoom-min="16" zoom-max="16"><line use="footway:z16"/></m>&ndash;&gt;-->
+                            <!--<m v="track|footway|path|cycleway" zoom-min="17">-->
+                                <!--<line use="footway:z17"/>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                        <!--<m zoom-min="14">-->
+                            <!--<m v="footway">-->
+                                <!--<line use="footway"/>-->
+                            <!--</m>-->
+                            <!--<m v="cycleway">-->
+                                <!--<line use="highway:cycleway"/>-->
+                            <!--</m>-->
+                            <!--<m v="track">-->
+                                <!--<line use="highway:track"/>-->
+                            <!--</m>-->
+                            <!--<m v="path">-->
+                                <!--<line use="highway:path"/>-->
+                            <!--</m>-->
+                            <!--<m v="bridleway">-->
+                                <!--<line use="bridleway"/>-->
+                            <!--</m>-->
+                            <!--<m v="construction">-->
+                                <!--<line use="construction"/>-->
+                            <!--</m>-->
+                            <!--<m v="service">-->
+                                <!--&lt;!&ndash; matches every service but parking_isle &ndash;&gt;-->
+                                <!--<m k="service" v="-|parking_aisle">-->
+                                    <!--<line use="highway-service"/>-->
+                                <!--</m>-->
+                                <!--<m k="service" v="parking_aisle" zoom-min="16">-->
+                                    <!--<line use="highway-service" width="-0.4"/>-->
+                                <!--</m>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                        <!--<m v="trunk_link|motorway_link">-->
+                            <!--<line use="trunk_link"/>-->
+                            <!--<text use="major-road"/>-->
+                        <!--</m>-->
+                        <!--<m zoom-min="13">-->
+                            <!--<m v="byway|pedestrian">-->
+                                <!--<line use="residential" width="-0.4"/>-->
+                                <!--<text use="road"/>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                        <!--<m v="residential|road|unclassified|living_street" zoom-min="12">-->
+                            <!--<line use="residential"/>-->
+                            <!--<text use="road"/>-->
+                        <!--</m>-->
+                        <!--<m v="tertiary|secondary_link" zoom-min="12">-->
+                            <!--<line use="tertiary"/>-->
+                            <!--<text use="road"/>-->
+                        <!--</m>-->
+                        <!--<m v="secondary|primary_link" zoom-min="10">-->
+                            <!--<line use="secondary:z11"/>-->
+                            <!--<text use="major-road"/>-->
+                        <!--</m>-->
+                        <!--<m v="primary">-->
+                            <!--<line use="primary:z11"/>-->
+                            <!--<text use="major-road"/>-->
+                            <!--<m zoom-max="12">-->
+                                <!--<text use="ref-caption"/>-->
+                            <!--</m>-->
+                            <!--<m zoom-min="13">-->
+                                <!--<text use="ref"/>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                        <!--<m v="trunk">-->
+                            <!--<line use="trunk"/>-->
+                            <!--<text use="major-road"/>-->
+                            <!--<m zoom-max="12">-->
+                                <!--<text use="ref-caption"/>-->
+                            <!--</m>-->
+                            <!--<m zoom-min="13">-->
+                                <!--<text use="ref"/>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                        <!--<m v="motorway">-->
+                            <!--<line use="highway:z11"/>-->
+                            <!--<text use="major-road"/>-->
+                            <!--<m zoom-max="12">-->
+                                <!--<text use="ref-caption"/>-->
+                            <!--</m>-->
+                            <!--<m zoom-min="13">-->
+                                <!--<text use="ref"/>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                    <!--</m>-->
+                    <!--&lt;!&ndash; end area=~|no|false &ndash;&gt;-->
+                <!--</m>-->
+                <!--&lt;!&ndash; end tunnel|bridge=~|no|false &ndash;&gt;-->
+                <!--&lt;!&ndash; muse contain bridge &ndash;&gt;-->
+                <!--<m k="bridge">-->
+                    <!--&lt;!&ndash; except bridge=no|false &ndash;&gt;-->
+                    <!--<m k="bridge" v="-|no|false">-->
+                        <!--&lt;!&ndash; no areas &ndash;&gt;-->
+                        <!--<m k="area" v="~|no|false">-->
+                            <!--<m zoom-min="16">-->
+                                <!--<m v="steps">-->
+                                    <!--<line use="steps"/>-->
+                                <!--</m>-->
+                            <!--</m>-->
+                            <!--<m v="track|footway|path|cycleway" zoom-min="15">-->
+                                <!--<line use="footway:z17"/>-->
+                            <!--</m>-->
+                            <!--<m select="first" zoom-min="14">-->
+                                <!--<m v="footway">-->
+                                    <!--<line use="footway"/>-->
+                                <!--</m>-->
+                                <!--<m v="cycleway">-->
+                                    <!--<line use="highway:cycleway"/>-->
+                                <!--</m>-->
+                                <!--<m v="track">-->
+                                    <!--<line use="highway:track"/>-->
+                                <!--</m>-->
+                                <!--<m v="path">-->
+                                    <!--<line use="highway:path"/>-->
+                                <!--</m>-->
+                                <!--<m v="bridleway">-->
+                                    <!--<line use="bridleway"/>-->
+                                <!--</m>-->
+                                <!--<m v="construction">-->
+                                    <!--<line use="construction"/>-->
+                                <!--</m>-->
+                                <!--<m v="service">-->
+                                    <!--<line use="highway-service"/>-->
+                                <!--</m>-->
+                            <!--</m>-->
+                            <!--<m select="first" zoom-min="13">-->
+                                <!--<m v="byway|pedestrian">-->
+                                    <!--<line use="pedestrian:bridge"/>-->
+                                    <!--<text use="road"/>-->
+                                <!--</m>-->
+                                <!--<m v="residential|road|unclassified|living_street">-->
+                                    <!--<line use="residential:bridge"/>-->
+                                    <!--<text use="road"/>-->
+                                <!--</m>-->
+                            <!--</m>-->
+                            <!--<m select="first">-->
+                                <!--<m v="tertiary|secondary_link">-->
+                                    <!--<line use="tertiary"/>-->
+                                    <!--<text use="road"/>-->
+                                <!--</m>-->
+                                <!--<m v="trunk_link|motorway_link">-->
+                                    <!--<line use="trunk_link"/>-->
+                                    <!--<text use="major-road"/>-->
+                                <!--</m>-->
+                                <!--<m v="secondary|primary_link">-->
+                                    <!--<line use="secondary:z11"/>-->
+                                    <!--<text use="major-road"/>-->
+                                <!--</m>-->
+                                <!--<m v="primary">-->
+                                    <!--<line use="primary:z11"/>-->
+                                    <!--<text use="major-road"/>-->
+                                    <!--<m zoom-max="12">-->
+                                        <!--<text use="ref-caption"/>-->
+                                    <!--</m>-->
+                                    <!--<m zoom-min="13">-->
+                                        <!--<text use="ref"/>-->
+                                    <!--</m>-->
+                                <!--</m>-->
+                                <!--<m v="trunk">-->
+                                    <!--<line use="trunk"/>-->
+                                    <!--<text use="major-road"/>-->
+                                    <!--<m zoom-max="12">-->
+                                        <!--<text use="ref-caption"/>-->
+                                    <!--</m>-->
+                                    <!--<m zoom-min="13">-->
+                                        <!--<text use="ref"/>-->
+                                    <!--</m>-->
+                                <!--</m>-->
+                                <!--<m v="motorway">-->
+                                    <!--<line use="highway:z11"/>-->
+                                    <!--<text use="major-road"/>-->
+                                    <!--<m zoom-max="12">-->
+                                        <!--<text use="ref-caption"/>-->
+                                    <!--</m>-->
+                                    <!--<m zoom-min="13">-->
+                                        <!--<text use="ref"/>-->
+                                    <!--</m>-->
+                                <!--</m>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                        <!--&lt;!&ndash; end area=~|no|false &ndash;&gt;-->
+                        <!--<m k="area" select="first" v="yes|true">-->
+                            <!--<m v="footway" zoom-min="15">-->
+                                <!--<line stroke="#c0c0c0" width="0.15"/>-->
+                            <!--</m>-->
+                            <!--<m v="pedestrian|service|unclassified|residential|road|living_street" zoom-min="13">-->
+                                <!--<line fix="true" stroke="#c0c0c0" width="1.0"/>-->
+                            <!--</m>-->
+                        <!--</m>-->
+                        <!--&lt;!&ndash; end area=yes|true &ndash;&gt;-->
+                    <!--</m>-->
+                    <!--&lt;!&ndash; end bridge=yes &ndash;&gt;-->
+                <!--</m>-->
+            <!--</m>-->
+            <!--&lt;!&ndash; end zoom-min=11 &ndash;&gt;-->
+        <!--</m>-->
+        <!--&lt;!&ndash; end highway &ndash;&gt;-->
+    <!--</m>-->
 
 
 </rendertheme>
