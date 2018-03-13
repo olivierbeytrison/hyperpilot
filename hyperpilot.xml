@@ -474,9 +474,14 @@
         <line fix="true" stroke="#3948e2" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="3.0"/>
     </m>
 
+    <!-- alpine huts -->
+    <m k="tourism" v="alpine_hut">
+        <symbol src="symbols_new/alpinehut.svg"/>
+    </m>
+
     <!-- water -->
     <!--<style-area id="water" fill="#0000ff"/>-->
-    <style-line id="water" fix="true" cap="butt"  stroke="#ff0000" width="1.0"/>
+    <style-line id="water" fix="true" cap="butt" stroke="#ff0000" width="1.0"/>
     <style-line id="river" fix="false" stroke="#00ff00" use="water"/>
 
 
