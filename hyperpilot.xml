@@ -2,6 +2,9 @@
 <rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
+    <!-- generic styles -->
+    <style-line id="fix" cap="butt" fix="true" width="1.0"/>
+
 
     <!-- roads -->
     <!--<style-line id="highway:z11" stroke="#ff7e00" width="5.0"/>-->
@@ -16,7 +19,6 @@
     <!--<style-line cap="butt" id="pedestrian:bridge" use="pedestrian"/>-->
     <!--<style-line id="construction" use="secondary:z11"/>-->
     <!--<style-line id="highway-service" use="residential" width="-0.6"/>-->
-    <!--<style-line cap="butt" fix="true" id="fix" width="1.0"/>-->
     <!--<style-line id="cablecar" stroke="#3948e2" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="3.0"/>-->
     <!--<style-line id="powerline_big" stroke="#ff00f6" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="3.0"/>-->
     <!--<style-line id="powerline_small" stroke="#ff00f6" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="1.0"/>-->
@@ -28,7 +30,7 @@
     <!--<style-area  fill="#e6e3e5" id="railway|industrial"/>-->
     <!--<style-area  fill="#c9dc91" id="greens" use="tex1"/>-->
     <!--<style-area  fill="#d3dcb9" id="lightgreen" use="tex1"/>-->
-    <!--<style-area id="tex1" src="textures/rough.png"/>-->
+    <!--<style-area id="tex1" fill="#ff0000" />-->
     <!--<style-area  fill="#c2cba5" id="darkgreen" use="tex1"/>-->
     <!--<style-area  fill="#e4dab5" id="farmland" stroke="#d1dbc7" stroke-width="1.0" use="tex1"/>-->
     <!--<style-area  fill="#deecb9" id="greens2"/>-->
@@ -36,7 +38,6 @@
     <!--<style-area  fill="#b3d095" id="wood"/>-->
     <!--<style-area  fill="#efeae0" id="allotments" use="tex1"/>-->
     <!--<style-area  fill="#ddddcc" id="quarry"/>-->
-    <!--<style-area  fill="#99badf" id="water" use="tex1"/>-->
     <!--<style-area  fill="#f2f0eb" id="building" stroke="#b7b6b3" stroke-width="1.0"/>-->
     <!--<style-area  fill="#f2f0eb" id="rail" />-->
 
@@ -44,32 +45,31 @@
     <style-area fill="#005500" id="airport"/>
     <style-line cap="butt" id="airport" stroke="#005500" width="20"/>
 
+    <!-- water -->
+    <style-area fill="#99badf" id="water"/>
+    <style-line cap="butt" fix="true" id="water:outline" stroke="#99badf" width="1.0"/>
+    <style-line cap="butt" fix="true" id="water" stroke="#99badf" width="1.0"/>
+
+
     <!-- base style for fixed width lines -->
-    <style-text fill="#ff0000" id="road" k="name" priority="5" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-    <style-text fill="#ff0000" id="major-road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-    <style-text fill="#ff0000" id="ref" k="ref" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-    <style-text caption="true" id="ref-caption" use="ref"/>
-    <style-text fill="#ff0000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-    <style-text caption="true" dy="20" fill="#ff0000" id="poi" k="name" size="16" stroke="#ffffff" stroke-width="2.0"/>
-    <!-- meadow|garden -->
-    <!-- grass -->
-    <!-- grassland|scrub -->
-    <!-- marsh|wetland|mud|nature_reserve -->
-    <!-- park|common|green|cemetery|golf_course|dog_park -->
-    <style-line cap="butt" fix="true" id="park" stroke="#9ac56e" width="1.0"/>
-    <!-- track|footway|path|cycleway -->
-    <style-line cap="butt" fix="true" id="footway" stipple="2" stipple-stroke="#d35c48" stipple-width="0.6" stroke="#aaffffff" width="1.8"/>
-    <style-line id="highway:cycleway" use="pedestrian"/>
-    <style-line id="highway:track" use="pedestrian"/>
-    <style-line id="highway:path" use="pedestrian"/>
-    <style-line id="footway:z17" use="pedestrian"/>
-    <style-line cap="butt" id="bridleway" stipple-stroke="#837b58" stroke="#d3cb98" use="footway" width="0.1"/>
-    <style-line cap="butt" fix="true" id="steps" stipple="2" stipple-stroke="#be6253" stipple-width="1.0" stroke="#aaffffff" width="4.2"/>
-    <style-line cap="butt" fix="true" id="water:outline" stroke="#a4bbcc" width="1.0"/>
-    <style-line cap="butt" fix="true" id="water" stroke="#a4bbcc" width="1.0"/>
-    <style-line fix="false" id="river" stroke="#a4bbcc" use="water"/>
-    <style-line cap="butt" fix="true" id="fence" stroke="#444444" width="1.2"/>
-    <style-line id="building" stroke="#eeb7b6b3" use="fix"/>
+    <!--<style-text fill="#ff0000" id="road" k="name" priority="5" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text fill="#ff0000" id="major-road" k="name" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text fill="#ff0000" id="ref" k="ref" priority="2" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text caption="true" id="ref-caption" use="ref"/>-->
+    <!--<style-text fill="#ff0000" id="ferry" k="name" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>-->
+    <!--<style-text caption="true" dy="20" fill="#ff0000" id="poi" k="name" size="16" stroke="#ffffff" stroke-width="2.0"/>-->
+    <!--<style-line cap="butt" fix="true" id="park" stroke="#9ac56e" width="1.0"/>-->
+    <!--&lt;!&ndash; track|footway|path|cycleway &ndash;&gt;-->
+    <!--<style-line cap="butt" fix="true" id="footway" stipple="2" stipple-stroke="#d35c48" stipple-width="0.6" stroke="#aaffffff" width="1.8"/>-->
+    <!--<style-line id="highway:cycleway" use="pedestrian"/>-->
+    <!--<style-line id="highway:track" use="pedestrian"/>-->
+    <!--<style-line id="highway:path" use="pedestrian"/>-->
+    <!--<style-line id="footway:z17" use="pedestrian"/>-->
+    <!--<style-line cap="butt" id="bridleway" stipple-stroke="#837b58" stroke="#d3cb98" use="footway" width="0.1"/>-->
+    <!--<style-line cap="butt" fix="true" id="steps" stipple="2" stipple-stroke="#be6253" stipple-width="1.0" stroke="#aaffffff" width="4.2"/>-->
+    <!--<style-line fix="false" id="river" stroke="#a4bbcc" use="water"/>-->
+    <!--<style-line cap="butt" fix="true" id="fence" stroke="#444444" width="1.2"/>-->
+    <!--<style-line id="building" stroke="#eeb7b6b3" use="fix"/>-->
     <m e="way" k="natural" v="issea|sea">
         <area mesh="true" use="water"/>
     </m>
@@ -78,7 +78,6 @@
     </m>
     <!-- all closed ways that are not 'highway' or 'building' -->
     <m closed="yes" e="way" k="highway|building" v="~">
-        <!-- landuse base -->
         <m k="landuse">
             <m v="urban">
                 <area use="greens"/>
@@ -108,22 +107,8 @@
             </m>
         </m>
         <m k="landuse|natural|leisure|amenity|tourism">
-            <!-- kind of more like landuse imho -->
             <m k="leisure|landuse" v="nature_reserve">
                 <area use="greens2"/>
-                <m zoom-min="14">
-                    <line cap="butt" fix="true" stroke="#abe29c" width="1.0"/>
-                </m>
-            </m>
-            <!-- landuse -->
-            <m k="landuse" zoom-min="11">
-                <!-- how about 'leisure' for this one? -->
-                <m v="cemetery">
-                    <area use="park"/>
-                    <m zoom-min="14">
-                        <line use="park"/>
-                    </m>
-                </m>
             </m>
             <m k="landuse" v="village_green|recreation_ground">
                 <area use="greens"/>
@@ -133,17 +118,10 @@
             </m>
             <m k="leisure" v="park|common|green|golf_course" zoom-min="11">
                 <area use="park"/>
-                <m zoom-min="14">
-                    <line use="park"/>
-                </m>
-                <!-- <text use="park" />-->
             </m>
             <m k="landuse|natural" v="forest|wood">
                 <area use="wood"/>
             </m>
-            <!-- keep grass above forest:wood and leisure:park! -->
-            <!-- http://wiki.openstreetmap.org/wiki/Proposed_features/conservation,
-              often serves as background for leisure=nature_reserve -->
             <m k="landuse" v="grass">
                 <area use="lightgreen"/>
             </m>
@@ -157,7 +135,6 @@
                 <line cap="butt" fix="true" stroke="#c1bcb6" width="1.3"/>
             </m>
         </m>
-        <!-- end landuse|natural|leisure||amenity|tourism -->
     </m>
     <!-- waterways -->
     <m e="way" k="waterway">
@@ -167,14 +144,10 @@
         <m v="canal">
             <line use="river" width="-0.3"/>
         </m>
-        <m v="stream" zoom-min="13">
-            <line stroke="#99BADF" use="water" width="10"/>
-        </m>
         <m select="first" v="river">
             <m zoom-min="12">
                 <line use="river" width="0.3"/>
             </m>
-            <!-- zoom <= 11 -->
             <m k="rank" v="~|-1" zoom-min="9">
                 <line use="water" width="0.2"/>
             </m>
@@ -206,15 +179,6 @@
         <m v="riverbank|dock">
             <area use="water"/>
             <line use="water:outline"/>
-        </m>
-        <m v="weir">
-            <line stroke="#000088" use="fix"/>
-        </m>
-        <m v="dam" zoom-min="12">
-            <line stroke="#ababab" use="fix" width="0.2"/>
-        </m>
-        <m k="lock" v="yes|true">
-            <line stroke="#f8f8f8" use="fix" width="0.5"/>
         </m>
     </m>
     <m e="way">
@@ -609,55 +573,44 @@
                 <circle fill="#ffffff" radius="1.4" scale-radius="true"/>
             </m>
         </m>
-        <!-- historic -->
-        <m k="historic">
-            <symbol src="symbols/tourist/monument.svg"/>
-            <m zoom-min="17">
-                <text use="poi"/>
-            </m>
+    </m>
+
+    <!-- cities -->
+    <m k="place">
+        <m v="island">
+            <caption fill="#ff0000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
-        <!-- place -->
-        <m k="place">
-            <m v="locality" zoom-min="13">
-                <caption fill="#ff0000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            </m>
-            <m v="suburb" zoom-max="14">
-                <caption fill="#ff0000" k="name" priority="4" size="17" stroke="#ffffff" stroke-width="2.0" style="bold_italic"/>
-            </m>
-            <m v="village" zoom-max="14">
-                <caption fill="#ff0000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2.0"/>
-            </m>
-            <m v="island" zoom-min="10">
-                <caption fill="#ff0000" k="name" priority="5" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            </m>
-            <m v="town">
-                <caption fill="#ff0000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2.0"/>
-            </m>
-            <m v="city">
-                <m zoom-min="7">
-                    <caption dy="14" fill="#ff0000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" style="bold" symbol="symbols/dot_black.svg"/>
-                </m>
-                <m zoom-max="6">
-                    <caption dy="14" fill="#ff0000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" symbol="symbols/dot_black.svg"/>
-                </m>
-            </m>
-            <m v="country">
-                <caption fill="#ff0000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            </m>
+        <m v="locality">
+            <caption fill="#ff0000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
-        <!-- railway -->
-        <m k="railway">
-            <m v="station">
-                <symbol src="symbols/transport/train_station2.svg"/>
-                <caption dy="20" fill="#ec2d2d" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            </m>
-            <m v="halt|tram_stop">
-                <symbol src="symbols/transport/tram_stop.svg"/>
-                <caption dy="20" fill="#ec2d2d" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            </m>
+        <m v="suburb" >
+            <caption fill="#ff0000" k="name" priority="4" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="village">
+            <caption fill="#ff0000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="town">
+            <caption fill="#ff0000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="city">
+            <caption fill="#ff0000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="country">
+            <caption fill="#ff0000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
     </m>
 
+    <!-- railway -->
+    <m k="railway">
+        <m v="station">
+            <symbol src="symbols/transport/train_station2.svg"/>
+            <caption dy="20" fill="#00ff00" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="halt|tram_stop">
+            <symbol src="symbols/transport/tram_stop.svg"/>
+            <caption dy="20" fill="#00ff00" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+    </m>
 
 
     <!-- airports -->
