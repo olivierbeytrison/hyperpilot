@@ -419,7 +419,7 @@
                                 <text use="ref"/>
                             </m>
                         </m>
-                        <m v="motorway">
+                        <m v="motorway" zoom-min="8">
                             <line blur="0.3" outline="0" use="highway:z11"/>
                             <!-- <outline use="glow"/>-->
                             <text use="major-road"/>
@@ -607,7 +607,7 @@
                             <line outline="1" use="tertiary"/>
                             <text use="road"/>
                         </m>
-                        <m v="secondary|primary_link">
+                        <m v="secondary|primary_link" zoom-min="10">
                             <line outline="primary" use="secondary:z11"/>
                             <text use="major-road"/>
                         </m>
