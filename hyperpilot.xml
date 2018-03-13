@@ -469,10 +469,9 @@
     </m>
 
     <!-- water -->
-    <style-area fill="#99badf" id="water"/>
-    <style-line cap="butt" fix="true" id="water:outline" stroke="#99badf" width="1.0"/>
-    <style-line cap="butt" fix="true" id="water" stroke="#99badf" width="1.0"/>
-    <style-line fix="false" id="river" stroke="#a4bbcc" use="water"/>
+    <style-area id="water" fill="#99badf"/>
+    <style-line id="water" cap="butt" fix="true" stroke="#99badf" width="1.0"/>
+    <style-line id="river" fix="false" stroke="#a4bbcc" use="water"/>
 
 
     <m e="way" closed="yes" k="natural" v="water">
@@ -525,7 +524,6 @@
         </m>
         <m v="riverbank|dock">
             <area use="water"/>
-            <line use="water:outline"/>
         </m>
     </m>
 
