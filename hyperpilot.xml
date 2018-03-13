@@ -439,13 +439,13 @@
         <m v="aerodrome|airport">
             <caption dy="18" fill="#ff0000" k="name" priority="3" size="19" stroke="#ffffff" stroke-width="2.0"/>
             <caption dy="-18" fill="#ff0000" k="ref" priority="3" size="19" stroke="#ffffff" stroke-width="2.0"/>
-            <symbol src="symbols/transport/airport2.svg"/>
+            <symbol src="symbols_new/airport.svg" />
         </m>
     </m>
 
     <!-- peaks -->
     <m k="natural" v="peak" zoom-min="13">
-        <symbol src="symbols/peak.svg" symbol-percent="100"/>
+        <symbol src="symbols_new/peak.svg"/>
         <caption dy="12" fill="#ff0000" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         <caption dy="-12" fill="#ff0000" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     </m>
@@ -480,65 +480,75 @@
     </m>
 
     <!-- water -->
-    <style-area id="water" fill="#0000ff"/>
-    <style-line id="water" fix="true" cap="butt" stroke="#ff0000" />
-    <style-line id="river" fix="false" cap="butt" stroke="#00ff00"/>
-
-
-    <m e="way" closed="yes" k="natural" v="water">
-        <area use="water"/>
-        <caption area-size="0.4" fill="#000000" k="name" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    <!-- lakes -->
+    <m e="way" k="natural" v="water" closed="yes">
+        <area fill="#B3DDFF"/>
+        <caption area-size="0.4" fill="#5273b2" k="name" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    </m>
+    <m e="way" k="landuse" v="reservoir|basin" closed="yes">
+        <area fill="#B3DDFF"/>
     </m>
 
-    <m e="way" k="waterway" v="river">
-        <pathText k="name" font-style="bold" font-size="14" fill="#ff0000" stroke="#ffffff" stroke-width="2"/>
+    <!-- text -->
+    <m e="way" k="waterway" v="river" zoom-min="12">
+        <pathText k="name" font-style="bold" font-size="14" fill="#5273b2" stroke="#ffffff" stroke-width="2"/>
     </m>
 
-    <m k="landuse" v="reservoir|basin">
-        <area use="water"/>
+    <m e="way" k="waterway" v="ditch" zoom-min="13">
+        <line stroke="#B3DDFF" stroke-width="0.6"/>
+    </m>
+    <m e="way" k="waterway" v="drain" zoom-min="13">
+        <line stroke="#B3DDFF" stroke-width="0.5" stroke-linecap="butt"/>
+    </m>
+    <m e="way" k="waterway" v="canal" zoom-min="10">
+        <line stroke="#B3DDFF" stroke-width="0.9" stroke-linecap="butt"/>
+    </m>
+    <m e="way" k="waterway" v="stream" zoom-min="13">
+        <line stroke="#B3DDFF" stroke-width="0.6"/>
+    </m>
+    <m e="way" k="waterway" v="river" zoom-min="8">
+        <line stroke="#B3DDFF" stroke-width="1.1"/>
+    </m>
+    <m e="way" k="waterway" v="riverbank" closed="yes">
+        <area fill="#B3DDFF"/>
+    </m>
+    <m e="way" k="waterway" v="riverbank" closed="no">
+        <line stroke="#B3DDFF" stroke-width="1"/>
     </m>
 
-    <m e="way" k="waterway">
-        <m v="ditch|drain" zoom-min="14">
-            <line use="water" width="0.2"/>
+    <m e="way" k="natural" v="water" closed="no">
+        <line stroke="#B3DDFF" stroke-width="1"/>
+    </m>
+
+    <m e="way" k="landuse" v="reservoir|basin" closed="no">
+        <line stroke="#B3DDFF" stroke-width="0.2"/>
+    </m>
+    <m e="way" k="intermittent|seasonal" v="wwi_yes|seas_yes" zoom-min="13">
+        <m e="way" k="waterway" v="drain" zoom-min="13">
+            <line stroke="#66FFFFFF" stroke-width="0.5" stroke-dasharray="2,8" stroke-linecap="butt"/>
         </m>
-        <m v="canal">
-            <line use="river" width="-0.3"/>
+        <m e="way" k="waterway" v="canal" zoom-min="10">
+            <line stroke="#66FFFFFF" stroke-width="0.9" stroke-dasharray="2,8" stroke-linecap="butt"/>
         </m>
-        <m select="first" v="river">
-            <m zoom-min="12">
-                <line use="river" width="0.3"/>
-            </m>
-            <m k="rank" v="~|-1" zoom-min="9">
-                <line use="water" width="0.2"/>
-            </m>
-            <m k="rank" v="0|1|2">
-                <line use="water" width="0.3"/>
-            </m>
-            <m k="rank" v="3" zoom-min="3">
-                <line use="water" width="0.3"/>
-            </m>
-            <m k="rank" v="4" zoom-min="4">
-                <line use="water" width="0.3"/>
-            </m>
-            <m k="rank" v="5" zoom-min="5">
-                <line use="water" width="0.3"/>
-            </m>
-            <m k="rank" v="6" zoom-min="6">
-                <line use="water" width="0.2"/>
-            </m>
-            <m k="rank" v="7" zoom-min="7">
-                <line use="water" width="0.2"/>
-            </m>
-            <m k="rank" v="8" zoom-min="8">
-                <line use="water" width="0.1"/>
-            </m>
-            <m k="rank" v="9" zoom-min="9">
-                <line use="water" width="0.1"/>
-            </m>
+        <m e="way" k="waterway" v="stream|ditch" zoom-min="13">
+            <line stroke="#66FFFFFF" stroke-width="0.6" stroke-dasharray="2,8" stroke-linecap="butt"/>
         </m>
-        <m v="riverbank|dock">
-            <area use="water"/>
+        <m e="way" k="waterway" v="river" zoom-min="8">
+            <line stroke="#66FFFFFF" stroke-width="1.1" stroke-dasharray="2,8" stroke-linecap="butt"/>
+        </m>
+    </m>
+
+
+    <!-- underground waterways -->
+    <m e="way" k="tunnel" v="yes" zoom-min="14">
+        <m e="way" k="waterway" v="ditch|stream">
+            <line stroke="#90FFFFFF" stroke-width="0.4" stroke-dasharray="20,2" stroke-linecap="butt"/>
+        </m>
+        <m e="way" k="waterway" v="drain">
+            <line stroke="#90FFFFFF" stroke-width="0.5" stroke-dasharray="20,2" stroke-linecap="butt"/>
+        </m>
+        <m e="way" k="waterway" v="canal|river">
+            <line stroke="#90FFFFFF" stroke-width="0.9" stroke-dasharray="20,2" stroke-linecap="butt"/>
         </m>
     </m>
 
