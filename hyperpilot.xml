@@ -450,6 +450,12 @@
         <caption dy="-12" fill="#ff0000" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     </m>
 
+    <!-- place of worship / churches -->
+    <m k="amenity" v="place_of_worship">
+        <area fill="#ff0000"/>
+    </m>
+
+
     <!-- power lines -->
     <m e="way" k="power" v="line">
         <line fix="true" stroke="#ff00f6" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="3.0"/>
