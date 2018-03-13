@@ -2,19 +2,19 @@
 <rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
     <!-- START hyperpilot  -->
     <!-- roads -->
-    <style-line id="highway:z11" stroke="#ff7e00" width="5.0"/>
-    <style-line id="trunk" stroke="#ff7e00" width="5.0"/>
-    <style-line cap="butt" id="trunk_link" stroke="#ff7e00" width="3.0"/>
-    <style-line id="primary:z11" stroke="#dc8912" width="5.0"/>
-    <style-line id="secondary:z11" stroke="#e7bc28" width="4.0"/>
-    <style-line id="tertiary" stroke="#e7bc28" width="4.0"/>
-    <style-line id="residential" stroke="#b59b41" width="3.0"/>
-    <style-line id="pedestrian" stroke="#cccccc" width="3.0"/>
-    <style-line cap="butt" id="residential:bridge" use="residential"/>
-    <style-line cap="butt" id="pedestrian:bridge" use="pedestrian"/>
-    <style-line id="construction" use="secondary:z11"/>
-    <style-line id="highway-service" use="residential" width="-0.6"/>
-    <style-line cap="butt" fix="true" id="fix" width="1.0"/>
+    <!--<style-line id="highway:z11" stroke="#ff7e00" width="5.0"/>-->
+    <!--<style-line id="trunk" stroke="#ff7e00" width="5.0"/>-->
+    <!--<style-line cap="butt" id="trunk_link" stroke="#ff7e00" width="3.0"/>-->
+    <!--<style-line id="primary:z11" stroke="#dc8912" width="5.0"/>-->
+    <!--<style-line id="secondary:z11" stroke="#e7bc28" width="4.0"/>-->
+    <!--<style-line id="tertiary" stroke="#e7bc28" width="4.0"/>-->
+    <!--<style-line id="residential" stroke="#b59b41" width="3.0"/>-->
+    <!--<style-line id="pedestrian" stroke="#cccccc" width="3.0"/>-->
+    <!--<style-line cap="butt" id="residential:bridge" use="residential"/>-->
+    <!--<style-line cap="butt" id="pedestrian:bridge" use="pedestrian"/>-->
+    <!--<style-line id="construction" use="secondary:z11"/>-->
+    <!--<style-line id="highway-service" use="residential" width="-0.6"/>-->
+    <!--<style-line cap="butt" fix="true" id="fix" width="1.0"/>-->
     <!-- military -->
     <style-area fade="11" fill="#f1bfbf" id="military"/>
     <!-- END hyperpilot  -->
