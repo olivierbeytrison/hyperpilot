@@ -495,61 +495,33 @@
     </m>
 
     <m e="way" k="waterway" v="ditch" zoom-min="13">
-        <line stroke="#B3DDFF" stroke-width="0.6"/>
+        <line stroke="#B3DDFF" stroke-width="2.4"/>
     </m>
     <m e="way" k="waterway" v="drain" zoom-min="13">
-        <line stroke="#B3DDFF" stroke-width="0.5" stroke-linecap="butt"/>
+        <line stroke="#B3DDFF" stroke-width="2.0"/>
     </m>
     <m e="way" k="waterway" v="canal" zoom-min="10">
-        <line stroke="#B3DDFF" stroke-width="0.9" stroke-linecap="butt"/>
+        <line stroke="#B3DDFF" stroke-width="3.6"/>
     </m>
     <m e="way" k="waterway" v="stream" zoom-min="13">
-        <line stroke="#B3DDFF" stroke-width="0.6"/>
+        <line stroke="#B3DDFF" stroke-width="2.4"/>
     </m>
     <m e="way" k="waterway" v="river" zoom-min="8">
-        <line stroke="#B3DDFF" stroke-width="1.1"/>
+        <line stroke="#B3DDFF" stroke-width="4.4"/>
     </m>
     <m e="way" k="waterway" v="riverbank" closed="yes">
         <area fill="#B3DDFF"/>
     </m>
     <m e="way" k="waterway" v="riverbank" closed="no">
-        <line stroke="#B3DDFF" stroke-width="1"/>
+        <line stroke="#B3DDFF" stroke-width="4.0"/>
     </m>
 
     <m e="way" k="natural" v="water" closed="no">
-        <line stroke="#B3DDFF" stroke-width="1"/>
+        <line stroke="#B3DDFF" stroke-width="4.0"/>
     </m>
 
     <m e="way" k="landuse" v="reservoir|basin" closed="no">
-        <line stroke="#B3DDFF" stroke-width="0.2"/>
-    </m>
-    <m e="way" k="intermittent|seasonal" v="wwi_yes|seas_yes" zoom-min="13">
-        <m e="way" k="waterway" v="drain" zoom-min="13">
-            <line stroke="#66FFFFFF" stroke-width="0.5" stroke-dasharray="2,8" stroke-linecap="butt"/>
-        </m>
-        <m e="way" k="waterway" v="canal" zoom-min="10">
-            <line stroke="#66FFFFFF" stroke-width="0.9" stroke-dasharray="2,8" stroke-linecap="butt"/>
-        </m>
-        <m e="way" k="waterway" v="stream|ditch" zoom-min="13">
-            <line stroke="#66FFFFFF" stroke-width="0.6" stroke-dasharray="2,8" stroke-linecap="butt"/>
-        </m>
-        <m e="way" k="waterway" v="river" zoom-min="8">
-            <line stroke="#66FFFFFF" stroke-width="1.1" stroke-dasharray="2,8" stroke-linecap="butt"/>
-        </m>
-    </m>
-
-
-    <!-- underground waterways -->
-    <m e="way" k="tunnel" v="yes" zoom-min="14">
-        <m e="way" k="waterway" v="ditch|stream">
-            <line stroke="#90FFFFFF" stroke-width="0.4" stroke-dasharray="20,2" stroke-linecap="butt"/>
-        </m>
-        <m e="way" k="waterway" v="drain">
-            <line stroke="#90FFFFFF" stroke-width="0.5" stroke-dasharray="20,2" stroke-linecap="butt"/>
-        </m>
-        <m e="way" k="waterway" v="canal|river">
-            <line stroke="#90FFFFFF" stroke-width="0.9" stroke-dasharray="20,2" stroke-linecap="butt"/>
-        </m>
+        <line stroke="#B3DDFF" stroke-width="0.8"/>
     </m>
 
 </rendertheme>
