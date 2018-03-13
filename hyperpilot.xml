@@ -433,13 +433,13 @@
 
     <!-- airports -->
     <m k="aeroway" zoom-min="10">
-        <area fill="#005500" id="airport"/>
-        <line cap="butt" id="airport" stroke="#005500" width="20"/>
+        <area fill="#005500"/>
+        <line cap="butt" stroke="#005500" width="20"/>
 
         <m v="aerodrome|airport">
-            <caption dy="18" fill="#ff0000" k="name" priority="3" size="19" stroke="#ffffff" stroke-width="2.0"/>
-            <caption dy="-18" fill="#ff0000" k="ref" priority="3" size="19" stroke="#ffffff" stroke-width="2.0"/>
-            <symbol src="symbols_new/airport.svg" />
+            <caption dy="18" fill="#ff0000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2.0"/>
+            <caption dy="-18" fill="#ff0000" k="ref" priority="3" size="16" stroke="#ffffff" stroke-width="2.0"/>
+            <symbol src="symbols_new/airport2.svg"/>
         </m>
     </m>
 
